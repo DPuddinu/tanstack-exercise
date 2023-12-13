@@ -1,9 +1,13 @@
-export const Post = () => {
+import { PostByIdRoute } from "@/routes/posts-route";
 
+const Post = () => {
+
+  const post = PostByIdRoute.useLoaderData()
   return (
     <div>
-      Post
+      {post.body}
     </div>
   )
 };
 
+export default Post
