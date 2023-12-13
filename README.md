@@ -21,5 +21,6 @@ Argomenti trattati:
 - gestione errori
 
 Risorse: 
+- https://jsonplaceholder.typicode.com/
 - https://tanstack.com/
-- 
+- https://ui.shadcn.com/
