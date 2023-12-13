@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Tanstack Exercise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Facciamo un'app con due pagine:
+1) Recuperiamo una lista di post da questa api https://jsonplaceholder.typicode.com/posts, per mostrarli usiamo una tabella paginata
+2) Recuperiamo il dettaglio di un post tramite l'api https://jsonplaceholder.typicode.com/posts/id, cliccando sulla riga corrispondente nella tabella accediamo alla pagina di dettaglio.
 
-Currently, two official plugins are available:
+# UX specifications
+Vogliamo che l'utente possa:
+- aggiungere nuovi post tramite un form validato
+- selezionare il numero di elementi per pagina da mostrare nella tabella
+- selezionare una pagina a cui poter saltare
+- selezionare una modalità infinite scrolling: non si usa la paginazione, ma si ha una tabella "infinita".
+- vedere un toast di errore nel caso in cui una chiamata non vada a buon fine
+- vedere un toast di conferma nel caso in cui la chiamata vada a buon fine.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Argomenti trattati:
+- routing
+- paginazione
+- infinite scrolling
+- prefetching
+- gestione errori
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Risorse: 
+- https://tanstack.com/
+- 
