@@ -1,0 +1,904 @@
+{
+  "vehicles": [
+    {
+      "id": "241d2d30-a8a3-48a7-99e2-5144ae316c9d",
+      "name": "Bentley Countach",
+      "color": "plum",
+      "manufacturer": "Ferrari",
+      "fuel": "Electric",
+      "type": "Hatchback",
+      "vrm": "LW33XGW"
+    },
+    {
+      "id": "aecc393f-0871-48b1-9b34-a5b6dd04427f",
+      "name": "Chevrolet Camry",
+      "color": "teal",
+      "manufacturer": "Rolls Royce",
+      "fuel": "Hybrid",
+      "type": "Wagon",
+      "vrm": "SW37HJQ"
+    },
+    {
+      "id": "dde732bd-0310-4ee5-8f8d-3d4b72ae6766",
+      "name": "Volkswagen Sentra",
+      "color": "maroon",
+      "manufacturer": "Mazda",
+      "fuel": "Electric",
+      "type": "Coupe",
+      "vrm": "IT49JFJ"
+    },
+    {
+      "id": "e559f0cd-041c-4153-b2e6-93394e8d161e",
+      "name": "Chrysler Volt",
+      "color": "magenta",
+      "manufacturer": "Honda",
+      "fuel": "Electric",
+      "type": "Hatchback",
+      "vrm": "DI66QYG"
+    },
+    {
+      "id": "297fc5b5-aa5d-4101-bd6a-100180e5dc83",
+      "name": "Dodge Alpine",
+      "color": "mint green",
+      "manufacturer": "Mini",
+      "fuel": "Hybrid",
+      "type": "SUV",
+      "vrm": "RC70GQI"
+    },
+    {
+      "id": "fc05a827-9147-4ae3-b17a-cfdb4eb28505",
+      "name": "Ferrari XC90",
+      "color": "red",
+      "manufacturer": "Aston Martin",
+      "fuel": "Hybrid",
+      "type": "Coupe",
+      "vrm": "DN12OAG"
+    },
+    {
+      "id": "4afd42e1-b573-4b1c-abb4-769b092a11da",
+      "name": "Fiat Corvette",
+      "color": "mint green",
+      "manufacturer": "Tesla",
+      "fuel": "Diesel",
+      "type": "Passenger Van",
+      "vrm": "MN83RDN"
+    },
+    {
+      "id": "ca40e9c8-9b1c-4ac8-a14a-d0f13ada5413",
+      "name": "Tesla PT Cruiser",
+      "color": "fuchsia",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Diesel",
+      "type": "Crew Cab Pickup",
+      "vrm": "AN90PHG"
+    },
+    {
+      "id": "2ae379da-4f4e-4a83-9fa5-0ef19def9c44",
+      "name": "Kia Accord",
+      "color": "silver",
+      "manufacturer": "Fiat",
+      "fuel": "Diesel",
+      "type": "Wagon",
+      "vrm": "FN99FZO"
+    },
+    {
+      "id": "567cb063-89f2-4c97-a470-dbb476f69837",
+      "name": "Bentley Aventador",
+      "color": "magenta",
+      "manufacturer": "Tesla",
+      "fuel": "Hybrid",
+      "type": "Convertible",
+      "vrm": "DA73CYU"
+    },
+    {
+      "id": "eb8b4d35-7a6b-49ef-a96b-0f85cf064cc0",
+      "name": "Rolls Royce Spyder",
+      "color": "salmon",
+      "manufacturer": "Fiat",
+      "fuel": "Hybrid",
+      "type": "Extended Cab Pickup",
+      "vrm": "PS70MPG"
+    },
+    {
+      "id": "01e3e5ba-b15f-49c9-9dcc-f481ab452f3f",
+      "name": "Chrysler Taurus",
+      "color": "magenta",
+      "manufacturer": "Bentley",
+      "fuel": "Diesel",
+      "type": "Minivan",
+      "vrm": "KH17RPX"
+    },
+    {
+      "id": "4e68bb9a-bf1e-4700-a58b-e1a8bb668502",
+      "name": "Tesla Model 3",
+      "color": "maroon",
+      "manufacturer": "Bugatti",
+      "fuel": "Electric",
+      "type": "Hatchback",
+      "vrm": "RZ47EDR"
+    },
+    {
+      "id": "e5a935ed-1b87-4c26-ab1a-1a47c7e25913",
+      "name": "Kia El Camino",
+      "color": "purple",
+      "manufacturer": "Chrysler",
+      "fuel": "Gasoline",
+      "type": "Extended Cab Pickup",
+      "vrm": "GE79IMD"
+    },
+    {
+      "id": "f4eb1e7f-6221-42a4-abea-2dbf66519d63",
+      "name": "Ford XTS",
+      "color": "sky blue",
+      "manufacturer": "Chrysler",
+      "fuel": "Hybrid",
+      "type": "Wagon",
+      "vrm": "VJ99ECA"
+    },
+    {
+      "id": "1979eef1-87b8-42af-860d-c95a41db4039",
+      "name": "Lamborghini Volt",
+      "color": "white",
+      "manufacturer": "Hyundai",
+      "fuel": "Gasoline",
+      "type": "Minivan",
+      "vrm": "JK97JVD"
+    },
+    {
+      "id": "d3d6e3f7-2a61-4b56-bcc7-ecd5c6a49f8c",
+      "name": "Rolls Royce Beetle",
+      "color": "lavender",
+      "manufacturer": "Bentley",
+      "fuel": "Electric",
+      "type": "Cargo Van",
+      "vrm": "XC52FJN"
+    },
+    {
+      "id": "0d2e437a-b85a-44d9-b066-b4d58d330495",
+      "name": "Chevrolet Countach",
+      "color": "teal",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Gasoline",
+      "type": "Sedan",
+      "vrm": "JG00IPK"
+    },
+    {
+      "id": "c9c735ba-d898-4eb3-bca6-70cbd9b76502",
+      "name": "Polestar Durango",
+      "color": "fuchsia",
+      "manufacturer": "Mini",
+      "fuel": "Diesel",
+      "type": "Minivan",
+      "vrm": "JW75HES"
+    },
+    {
+      "id": "7f773d2d-61d3-4b7b-b0be-5d15b9049783",
+      "name": "Ferrari CTS",
+      "color": "gold",
+      "manufacturer": "Bugatti",
+      "fuel": "Hybrid",
+      "type": "Cargo Van",
+      "vrm": "YV95LIT"
+    },
+    {
+      "id": "2993bb24-a300-485e-b618-e2eb103a67ef",
+      "name": "Chevrolet Civic",
+      "color": "yellow",
+      "manufacturer": "Chrysler",
+      "fuel": "Gasoline",
+      "type": "Cargo Van",
+      "vrm": "FN60WDG"
+    },
+    {
+      "id": "36046bdf-ea46-4d79-9089-297b6fce26f7",
+      "name": "Chevrolet Model 3",
+      "color": "tan",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Hybrid",
+      "type": "Wagon",
+      "vrm": "DO11PUR"
+    },
+    {
+      "id": "ae4b6c06-3639-4520-a1e0-4f98fda25f18",
+      "name": "Volkswagen Grand Caravan",
+      "color": "pink",
+      "manufacturer": "Audi",
+      "fuel": "Hybrid",
+      "type": "Convertible",
+      "vrm": "CZ89ZSO"
+    },
+    {
+      "id": "243bdb9d-8ed6-4923-bef6-b8e0875c927b",
+      "name": "Bentley Beetle",
+      "color": "indigo",
+      "manufacturer": "BMW",
+      "fuel": "Hybrid",
+      "type": "Passenger Van",
+      "vrm": "YK92TLU"
+    },
+    {
+      "id": "f2021426-6a92-42a0-bfe5-4928980b8ef8",
+      "name": "Fiat Ranchero",
+      "color": "sky blue",
+      "manufacturer": "Dodge",
+      "fuel": "Gasoline",
+      "type": "Minivan",
+      "vrm": "BG21UNA"
+    },
+    {
+      "id": "7eb2ccfb-6a42-4dc9-90f9-7f42d7540f83",
+      "name": "Honda Model Y",
+      "color": "teal",
+      "manufacturer": "Ferrari",
+      "fuel": "Gasoline",
+      "type": "SUV",
+      "vrm": "PF36ULG"
+    },
+    {
+      "id": "50a22fe5-89fd-41ec-a61d-0938bbf91adb",
+      "name": "Polestar Model Y",
+      "color": "maroon",
+      "manufacturer": "Chrysler",
+      "fuel": "Gasoline",
+      "type": "Convertible",
+      "vrm": "CL68VVO"
+    },
+    {
+      "id": "ed286840-e578-4cf1-96d3-e34adfdbf2a7",
+      "name": "Land Rover XC90",
+      "color": "yellow",
+      "manufacturer": "Hyundai",
+      "fuel": "Hybrid",
+      "type": "Convertible",
+      "vrm": "PO81FEV"
+    },
+    {
+      "id": "ab70f74f-1524-455e-8281-0dc94ca2ed33",
+      "name": "Jaguar ATS",
+      "color": "yellow",
+      "manufacturer": "Mazda",
+      "fuel": "Gasoline",
+      "type": "Minivan",
+      "vrm": "JE22FEP"
+    },
+    {
+      "id": "28821ae3-e674-47ca-adf6-40a5fb7d65a9",
+      "name": "Volvo Jetta",
+      "color": "magenta",
+      "manufacturer": "BMW",
+      "fuel": "Diesel",
+      "type": "Hatchback",
+      "vrm": "LD56KWO"
+    },
+    {
+      "id": "6c2b4dc7-24ea-4446-ae05-f3a7941c959c",
+      "name": "Bugatti Explorer",
+      "color": "purple",
+      "manufacturer": "Toyota",
+      "fuel": "Hybrid",
+      "type": "Sedan",
+      "vrm": "UI12HDN"
+    },
+    {
+      "id": "1e92a849-c4c8-4c83-a509-bbb218638d69",
+      "name": "Hyundai Aventador",
+      "color": "purple",
+      "manufacturer": "Jaguar",
+      "fuel": "Hybrid",
+      "type": "Sedan",
+      "vrm": "XM77YWI"
+    },
+    {
+      "id": "f7739476-0899-4c19-8e15-b27128bf7fad",
+      "name": "Jeep LeBaron",
+      "color": "black",
+      "manufacturer": "Bugatti",
+      "fuel": "Hybrid",
+      "type": "Extended Cab Pickup",
+      "vrm": "ZS73HGF"
+    },
+    {
+      "id": "06be409c-a0ce-4f11-b67a-5dc86d540989",
+      "name": "Land Rover Altima",
+      "color": "azure",
+      "manufacturer": "Mini",
+      "fuel": "Electric",
+      "type": "Hatchback",
+      "vrm": "YH12LZU"
+    },
+    {
+      "id": "8e9b88ed-0c3c-4a44-ab95-c32974d917b9",
+      "name": "Volkswagen Roadster",
+      "color": "teal",
+      "manufacturer": "Land Rover",
+      "fuel": "Diesel",
+      "type": "Passenger Van",
+      "vrm": "YV25CTE"
+    },
+    {
+      "id": "fe5a46d0-523f-410c-b112-28c8d5e4ac64",
+      "name": "Porsche Jetta",
+      "color": "lavender",
+      "manufacturer": "Kia",
+      "fuel": "Hybrid",
+      "type": "Crew Cab Pickup",
+      "vrm": "NH99BON"
+    },
+    {
+      "id": "6f10403c-7c76-4ddf-b164-4caa2e779ad6",
+      "name": "Maserati Wrangler",
+      "color": "white",
+      "manufacturer": "Land Rover",
+      "fuel": "Diesel",
+      "type": "Extended Cab Pickup",
+      "vrm": "RZ24IPG"
+    },
+    {
+      "id": "458b372d-cf26-4c8c-84d3-b8a02cd3d52d",
+      "name": "Cadillac LeBaron",
+      "color": "red",
+      "manufacturer": "Mazda",
+      "fuel": "Electric",
+      "type": "Hatchback",
+      "vrm": "TQ19UMX"
+    },
+    {
+      "id": "044d91e3-0ea4-496c-99b2-c224d35087fc",
+      "name": "Ferrari Ranchero",
+      "color": "salmon",
+      "manufacturer": "Dodge",
+      "fuel": "Gasoline",
+      "type": "Crew Cab Pickup",
+      "vrm": "ND75OQZ"
+    },
+    {
+      "id": "73b15435-b3ed-4fc1-831a-e1d49db84fe0",
+      "name": "Cadillac PT Cruiser",
+      "color": "white",
+      "manufacturer": "Volkswagen",
+      "fuel": "Gasoline",
+      "type": "Hatchback",
+      "vrm": "GB66ENO"
+    },
+    {
+      "id": "48f58ce2-cb6a-4d56-bd62-96427c4eb6e5",
+      "name": "Maserati CTS",
+      "color": "purple",
+      "manufacturer": "Porsche",
+      "fuel": "Gasoline",
+      "type": "Sedan",
+      "vrm": "ES03UUW"
+    },
+    {
+      "id": "414c735d-0a3e-4acd-b3bd-d142612fdbd6",
+      "name": "Kia Model T",
+      "color": "azure",
+      "manufacturer": "Jeep",
+      "fuel": "Hybrid",
+      "type": "Coupe",
+      "vrm": "XG79HMY"
+    },
+    {
+      "id": "13f50f15-f431-47a0-bfec-66034582188e",
+      "name": "Jeep Model X",
+      "color": "lavender",
+      "manufacturer": "Mazda",
+      "fuel": "Hybrid",
+      "type": "SUV",
+      "vrm": "MB90XBA"
+    },
+    {
+      "id": "af8dfbdf-24ed-4044-bd64-87caba10510f",
+      "name": "Mercedes Benz Taurus",
+      "color": "salmon",
+      "manufacturer": "Mazda",
+      "fuel": "Diesel",
+      "type": "Coupe",
+      "vrm": "OU92FUI"
+    },
+    {
+      "id": "fbf58710-4b6f-4570-b1d2-1ad423aeb543",
+      "name": "Mini F-150",
+      "color": "violet",
+      "manufacturer": "Aston Martin",
+      "fuel": "Diesel",
+      "type": "Extended Cab Pickup",
+      "vrm": "VZ26AIM"
+    },
+    {
+      "id": "938c92f6-312c-4b13-a735-18a6e5afb4ce",
+      "name": "Land Rover Model Y",
+      "color": "grey",
+      "manufacturer": "Mazda",
+      "fuel": "Electric",
+      "type": "Passenger Van",
+      "vrm": "IK32NEX"
+    },
+    {
+      "id": "b065067a-a780-41ba-bd3d-ef6e51bd9cad",
+      "name": "Bentley Corvette",
+      "color": "grey",
+      "manufacturer": "Ford",
+      "fuel": "Hybrid",
+      "type": "Cargo Van",
+      "vrm": "PO24YLB"
+    },
+    {
+      "id": "914db8a6-5bfc-4983-a34e-c0e1ae342ffa",
+      "name": "Toyota Corvette",
+      "color": "sky blue",
+      "manufacturer": "Chrysler",
+      "fuel": "Diesel",
+      "type": "Passenger Van",
+      "vrm": "SE44NYW"
+    },
+    {
+      "id": "83382b45-771c-4aa2-b565-b87aa3d0aa30",
+      "name": "Chevrolet Model T",
+      "color": "lavender",
+      "manufacturer": "Dodge",
+      "fuel": "Electric",
+      "type": "Minivan",
+      "vrm": "BH94TXH"
+    },
+    {
+      "id": "51e57e3e-fd98-47ae-b69c-029b3127e2c9",
+      "name": "Land Rover Prius",
+      "color": "black",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Electric",
+      "type": "Crew Cab Pickup",
+      "vrm": "ZU75HNL"
+    },
+    {
+      "id": "71f3a8af-7fe3-4099-8995-af4b3baaefa1",
+      "name": "Bugatti Explorer",
+      "color": "red",
+      "manufacturer": "Honda",
+      "fuel": "Diesel",
+      "type": "Wagon",
+      "vrm": "VX98OVE"
+    },
+    {
+      "id": "af1159e7-1492-4efa-bdc9-93eca7369837",
+      "name": "Lamborghini Beetle",
+      "color": "maroon",
+      "manufacturer": "Tesla",
+      "fuel": "Electric",
+      "type": "SUV",
+      "vrm": "XX08GLE"
+    },
+    {
+      "id": "876bbb93-6d86-4c89-b4c5-62f0f6c69e06",
+      "name": "Mazda Escalade",
+      "color": "plum",
+      "manufacturer": "Mazda",
+      "fuel": "Electric",
+      "type": "Extended Cab Pickup",
+      "vrm": "WD28FBN"
+    },
+    {
+      "id": "ff21562b-581b-456f-912e-b24328bcb22d",
+      "name": "Bugatti Accord",
+      "color": "pink",
+      "manufacturer": "Ford",
+      "fuel": "Hybrid",
+      "type": "Hatchback",
+      "vrm": "VQ33CCB"
+    },
+    {
+      "id": "66abb21c-42b8-4f47-8aeb-884c3054bab7",
+      "name": "Fiat Aventador",
+      "color": "teal",
+      "manufacturer": "Aston Martin",
+      "fuel": "Electric",
+      "type": "Cargo Van",
+      "vrm": "HQ83UCO"
+    },
+    {
+      "id": "7d606d0a-9e5e-40df-a8c3-c90c6dc74e16",
+      "name": "Hyundai Wrangler",
+      "color": "lavender",
+      "manufacturer": "Bentley",
+      "fuel": "Hybrid",
+      "type": "Hatchback",
+      "vrm": "XP20CZD"
+    },
+    {
+      "id": "2512186e-f7e8-4d6f-abe1-acbe51814e07",
+      "name": "Porsche Spyder",
+      "color": "green",
+      "manufacturer": "Lamborghini",
+      "fuel": "Diesel",
+      "type": "Crew Cab Pickup",
+      "vrm": "DS76OKE"
+    },
+    {
+      "id": "295ed5d2-e1c8-4773-9d68-e3ecd3104186",
+      "name": "Fiat Focus",
+      "color": "gold",
+      "manufacturer": "Rolls Royce",
+      "fuel": "Gasoline",
+      "type": "Cargo Van",
+      "vrm": "FR52AFL"
+    },
+    {
+      "id": "fcde9f3b-0698-42ce-8fbb-95c588a5ef82",
+      "name": "Nissan ATS",
+      "color": "pink",
+      "manufacturer": "Kia",
+      "fuel": "Gasoline",
+      "type": "SUV",
+      "vrm": "RL20LUX"
+    },
+    {
+      "id": "e96ed77f-257f-480f-8612-00c5608ec6b8",
+      "name": "Smart Roadster",
+      "color": "purple",
+      "manufacturer": "Hyundai",
+      "fuel": "Electric",
+      "type": "Minivan",
+      "vrm": "ML14DDA"
+    },
+    {
+      "id": "081ae6c5-079c-4852-84e8-006803bdf3ad",
+      "name": "Toyota Grand Cherokee",
+      "color": "olive",
+      "manufacturer": "Chrysler",
+      "fuel": "Diesel",
+      "type": "Convertible",
+      "vrm": "KN45AGX"
+    },
+    {
+      "id": "b81780a4-f899-45da-b28d-5305e54933e9",
+      "name": "Smart Corvette",
+      "color": "yellow",
+      "manufacturer": "Toyota",
+      "fuel": "Hybrid",
+      "type": "Minivan",
+      "vrm": "QZ04FQA"
+    },
+    {
+      "id": "67d9070d-dc2f-4f49-9846-7c970a8162ce",
+      "name": "Ford CX-9",
+      "color": "plum",
+      "manufacturer": "Jaguar",
+      "fuel": "Gasoline",
+      "type": "Wagon",
+      "vrm": "GZ64FOD"
+    },
+    {
+      "id": "474e51f2-3e0f-4768-8602-528c47326322",
+      "name": "BMW Wrangler",
+      "color": "plum",
+      "manufacturer": "Nissan",
+      "fuel": "Electric",
+      "type": "Extended Cab Pickup",
+      "vrm": "LQ81RSH"
+    },
+    {
+      "id": "4bea8c95-9dfd-48a7-80cb-b7bb5b951d27",
+      "name": "Volvo ATS",
+      "color": "black",
+      "manufacturer": "Fiat",
+      "fuel": "Electric",
+      "type": "Convertible",
+      "vrm": "TQ27OHJ"
+    },
+    {
+      "id": "fef8af3b-4906-4439-bf29-1372f64cc352",
+      "name": "Ford Grand Caravan",
+      "color": "tan",
+      "manufacturer": "Kia",
+      "fuel": "Gasoline",
+      "type": "Hatchback",
+      "vrm": "MY61QXG"
+    },
+    {
+      "id": "40f393cc-4b49-482e-828a-420791c2f4ad",
+      "name": "Dodge CTS",
+      "color": "turquoise",
+      "manufacturer": "Bugatti",
+      "fuel": "Hybrid",
+      "type": "SUV",
+      "vrm": "OG94UEN"
+    },
+    {
+      "id": "7fc441df-2172-47e2-9eb8-d6eaddd9368a",
+      "name": "Lamborghini Impala",
+      "color": "green",
+      "manufacturer": "Land Rover",
+      "fuel": "Hybrid",
+      "type": "Convertible",
+      "vrm": "GW14TWP"
+    },
+    {
+      "id": "ad69b71f-5b18-4000-820b-a24932421fc6",
+      "name": "Maserati Corvette",
+      "color": "lime",
+      "manufacturer": "Jeep",
+      "fuel": "Diesel",
+      "type": "SUV",
+      "vrm": "DD32NAY"
+    },
+    {
+      "id": "0c4d2a55-e9e9-4dc9-b118-8a0118df2284",
+      "name": "Jaguar Colorado",
+      "color": "black",
+      "manufacturer": "BMW",
+      "fuel": "Diesel",
+      "type": "Sedan",
+      "vrm": "GN26XNJ"
+    },
+    {
+      "id": "1a6242d6-1375-4b7f-80a0-4a2341e3f9eb",
+      "name": "Mini Challenger",
+      "color": "purple",
+      "manufacturer": "Mazda",
+      "fuel": "Diesel",
+      "type": "Convertible",
+      "vrm": "SJ47MUN"
+    },
+    {
+      "id": "8f5a78ad-d659-4dd3-b3fd-6595300dab51",
+      "name": "Mini Land Cruiser",
+      "color": "silver",
+      "manufacturer": "Volvo",
+      "fuel": "Hybrid",
+      "type": "Passenger Van",
+      "vrm": "KP68GFF"
+    },
+    {
+      "id": "b21bc837-d15f-4c63-a652-b5d1412a6ed4",
+      "name": "Maserati PT Cruiser",
+      "color": "orchid",
+      "manufacturer": "Toyota",
+      "fuel": "Hybrid",
+      "type": "Coupe",
+      "vrm": "NS37EEL"
+    },
+    {
+      "id": "91db6de3-3767-42b0-ba98-7b44c5cbba34",
+      "name": "Cadillac Jetta",
+      "color": "lime",
+      "manufacturer": "Ford",
+      "fuel": "Gasoline",
+      "type": "Extended Cab Pickup",
+      "vrm": "JT63WGA"
+    },
+    {
+      "id": "e2393f6f-ebce-44a8-9704-b7f0fa5da1a3",
+      "name": "Ford Grand Cherokee",
+      "color": "azure",
+      "manufacturer": "Lamborghini",
+      "fuel": "Electric",
+      "type": "Convertible",
+      "vrm": "FQ45ZFB"
+    },
+    {
+      "id": "9cedf5f3-1fd6-47c1-8357-541fa7ddaa12",
+      "name": "Cadillac Roadster",
+      "color": "black",
+      "manufacturer": "Mini",
+      "fuel": "Electric",
+      "type": "Coupe",
+      "vrm": "TL46EKD"
+    },
+    {
+      "id": "ad0ce966-2c52-4bdc-997f-b09d230867f0",
+      "name": "Lamborghini Model 3",
+      "color": "olive",
+      "manufacturer": "Chrysler",
+      "fuel": "Electric",
+      "type": "Cargo Van",
+      "vrm": "EE20XBF"
+    },
+    {
+      "id": "d9aa7620-74f2-41e9-9ebf-6e361508202e",
+      "name": "BMW XC90",
+      "color": "turquoise",
+      "manufacturer": "BMW",
+      "fuel": "Hybrid",
+      "type": "Wagon",
+      "vrm": "IY23VIK"
+    },
+    {
+      "id": "3f3c4ed2-abde-433a-916b-d954755d1606",
+      "name": "Kia Fortwo",
+      "color": "indigo",
+      "manufacturer": "Porsche",
+      "fuel": "Diesel",
+      "type": "Passenger Van",
+      "vrm": "QV04BEV"
+    },
+    {
+      "id": "49947ebe-071f-45ed-b039-2e872d0002cf",
+      "name": "Rolls Royce 911",
+      "color": "tan",
+      "manufacturer": "Rolls Royce",
+      "fuel": "Electric",
+      "type": "Convertible",
+      "vrm": "RU19VKI"
+    },
+    {
+      "id": "f222db63-3b19-4d1e-b414-c62ff02b701d",
+      "name": "Honda Corvette",
+      "color": "salmon",
+      "manufacturer": "Jeep",
+      "fuel": "Diesel",
+      "type": "Cargo Van",
+      "vrm": "BG92JOJ"
+    },
+    {
+      "id": "c35b8b6e-cc08-48b4-b359-8babb0a3b111",
+      "name": "Dodge Camry",
+      "color": "salmon",
+      "manufacturer": "Bentley",
+      "fuel": "Electric",
+      "type": "Cargo Van",
+      "vrm": "YC89SEX"
+    },
+    {
+      "id": "c41a8333-97d8-4f5c-98b2-56e9e69d1dc7",
+      "name": "Mazda Taurus",
+      "color": "silver",
+      "manufacturer": "Audi",
+      "fuel": "Hybrid",
+      "type": "Coupe",
+      "vrm": "SS73LRV"
+    },
+    {
+      "id": "b7be3247-d187-4631-afe2-63a657e1ac70",
+      "name": "Polestar Charger",
+      "color": "fuchsia",
+      "manufacturer": "Chevrolet",
+      "fuel": "Hybrid",
+      "type": "Minivan",
+      "vrm": "JM82JIN"
+    },
+    {
+      "id": "36cae4d4-e819-4470-a0ce-de2f4d823808",
+      "name": "Tesla Cruze",
+      "color": "mint green",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Gasoline",
+      "type": "Coupe",
+      "vrm": "BO34ZQT"
+    },
+    {
+      "id": "643008cf-b6cd-46e8-ab3e-405c152ceb50",
+      "name": "Rolls Royce Prius",
+      "color": "olive",
+      "manufacturer": "Honda",
+      "fuel": "Diesel",
+      "type": "Hatchback",
+      "vrm": "BP88SCR"
+    },
+    {
+      "id": "039cc7e0-ae17-4892-b35d-828ea7b6a226",
+      "name": "Chevrolet Ranchero",
+      "color": "teal",
+      "manufacturer": "Jaguar",
+      "fuel": "Hybrid",
+      "type": "Sedan",
+      "vrm": "ZJ81BIF"
+    },
+    {
+      "id": "3ede0c56-ce01-4ca3-b20d-8b0ca786094b",
+      "name": "Ford Durango",
+      "color": "maroon",
+      "manufacturer": "Land Rover",
+      "fuel": "Diesel",
+      "type": "Cargo Van",
+      "vrm": "CA71POT"
+    },
+    {
+      "id": "a1bb43ad-e068-4a9c-97df-1aa6d27cf3d7",
+      "name": "BMW Challenger",
+      "color": "tan",
+      "manufacturer": "Tesla",
+      "fuel": "Hybrid",
+      "type": "Coupe",
+      "vrm": "DC05HJI"
+    },
+    {
+      "id": "8e4b4636-6def-4a0a-9a13-472a6898d8f8",
+      "name": "Hyundai Roadster",
+      "color": "green",
+      "manufacturer": "Porsche",
+      "fuel": "Gasoline",
+      "type": "Convertible",
+      "vrm": "NI56FLE"
+    },
+    {
+      "id": "9ef2ecac-5be5-4943-9de4-9a99b13d3068",
+      "name": "Jaguar Colorado",
+      "color": "olive",
+      "manufacturer": "Ford",
+      "fuel": "Diesel",
+      "type": "Crew Cab Pickup",
+      "vrm": "CW67YIP"
+    },
+    {
+      "id": "149ca420-cc43-4964-995c-b2a2a79fba69",
+      "name": "Tesla 1",
+      "color": "lavender",
+      "manufacturer": "Nissan",
+      "fuel": "Gasoline",
+      "type": "Hatchback",
+      "vrm": "AT10WTO"
+    },
+    {
+      "id": "032f8bee-c9b0-452b-9e6f-331b2a6a522c",
+      "name": "Polestar CTS",
+      "color": "red",
+      "manufacturer": "Mercedes Benz",
+      "fuel": "Electric",
+      "type": "Coupe",
+      "vrm": "UA49QHB"
+    },
+    {
+      "id": "57562575-d7ec-4090-a41e-83aa73568b2b",
+      "name": "Toyota El Camino",
+      "color": "olive",
+      "manufacturer": "Fiat",
+      "fuel": "Hybrid",
+      "type": "Convertible",
+      "vrm": "YN35PGY"
+    },
+    {
+      "id": "9420963a-878e-4bab-9c19-1a6d7e58de02",
+      "name": "Rolls Royce Altima",
+      "color": "sky blue",
+      "manufacturer": "Hyundai",
+      "fuel": "Hybrid",
+      "type": "SUV",
+      "vrm": "AG83HWN"
+    },
+    {
+      "id": "c37e6021-5ce9-49c3-9b5f-773d69566281",
+      "name": "Ford Jetta",
+      "color": "cyan",
+      "manufacturer": "Chrysler",
+      "fuel": "Diesel",
+      "type": "Convertible",
+      "vrm": "IW36BNT"
+    },
+    {
+      "id": "459ad05e-50d1-4ddf-915a-f76c7523a0ce",
+      "name": "Polestar Model T",
+      "color": "yellow",
+      "manufacturer": "Volkswagen",
+      "fuel": "Hybrid",
+      "type": "Passenger Van",
+      "vrm": "RP64DMG"
+    },
+    {
+      "id": "2888a534-2749-4b29-bd77-e4e4b6c0169a",
+      "name": "Volkswagen XC90",
+      "color": "purple",
+      "manufacturer": "Mazda",
+      "fuel": "Gasoline",
+      "type": "Passenger Van",
+      "vrm": "LB91DQL"
+    },
+    {
+      "id": "75e7cfcb-d8a8-4e6c-aa90-1a8187db3af6",
+      "name": "Nissan XTS",
+      "color": "purple",
+      "manufacturer": "Chrysler",
+      "fuel": "Hybrid",
+      "type": "Hatchback",
+      "vrm": "QN07NPE"
+    },
+    {
+      "id": "5685a39b-1bda-4e86-89fd-5093d499abf3",
+      "name": "Bentley Sentra",
+      "color": "sky blue",
+      "manufacturer": "Chrysler",
+      "fuel": "Gasoline",
+      "type": "Sedan",
+      "vrm": "CL88KKI"
+    }
+  ]
+}
