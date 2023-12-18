@@ -14,10 +14,4 @@ export const columns: ColumnDef<VehicleType>[] = [
     accessorKey: 'type',
     header: 'TYPE',
   },
-  {
-    accessorKey: 'id',
-    header: (row) => <></>,
-    enableHiding: true,
-    cell: (row) => <></>,
-  },
 ];

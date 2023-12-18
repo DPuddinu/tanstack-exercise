@@ -6,6 +6,7 @@ import {
   VisibilityState,
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
   getFilteredRowModel,
   useReactTable,
 } from '@tanstack/react-table';
@@ -22,32 +23,40 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/primitives/ui/dropdown-menu';
 
 import { Link } from '@tanstack/react-router';
 import { Button } from '../primitives/ui/button';
 import { Input } from '@/components/primitives/ui/input';
+import { VehicleType } from '@/api/vehicle';
+import { ChevronsUpDown } from 'lucide-react';
 
-interface DataTableProps<VehicleType, TValue> {
-  columns: ColumnDef<VehicleType, TValue>[];
-  data: VehicleType[];
+interface DataTableProps<TData, TValue> {
+  columns: ColumnDef<TData, TValue>[];
+  data: TData[];
 }
 
-export function DataTable<VehicleType, TValue>({
+const rowsPerPage = [5, 10, 15, 20];
+
+export function DataTable<TData extends VehicleType, TValue>({
   columns,
   data,
-}: DataTableProps<VehicleType, TValue>) {
+}: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
 
+  const [filterValue, setFilterValue] = React.useState('name');
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
@@ -59,32 +68,44 @@ export function DataTable<VehicleType, TValue>({
 
   return (
     <div>
-      <div className='flex gap-12 items-center'>
-        <div className='flex items-center py-4'>
-          <Input
-            placeholder='Filter vehicles name...'
-            value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
-            onChange={(event) =>
-              table.getColumn('name')?.setFilterValue(event.target.value)
-            }
-            className='max-w-sm'
-          />
+      <div className='flex items-center'>
+        <div className='flex items-center'>
+          <span>Filter vehicles by</span>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant='outline'
+                className='flex justify-between capitalize p-0 px-1 mx-4 gap-2'
+              >
+                {filterValue}
+                <ChevronsUpDown className='w-3 h-3' />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {table.getAllColumns().map((column) => {
+                return (
+                  <DropdownMenuItem
+                    key={column.id}
+                    className='capitalize'
+                    onClick={() => setFilterValue(column.id)}
+                  >
+                    {column.id}
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <div className='flex items-center py-4'>
+            <Input
+              placeholder='Search'
+              onChange={(event) =>
+                table.getColumn(filterValue)?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          </div>
         </div>
-        <div className='flex items-center py-4'>
-          <Input
-            placeholder='Filter manufacturer...'
-            value={
-              (table.getColumn('manufacturer')?.getFilterValue() as string) ??
-              ''
-            }
-            onChange={(event) =>
-              table
-                .getColumn('manufacturer')
-                ?.setFilterValue(event.target.value)
-            }
-            className='max-w-sm'
-          />
-        </div>
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant='outline' className='ml-auto'>
@@ -144,7 +165,7 @@ export function DataTable<VehicleType, TValue>({
                     <TableCell key={cell.id}>
                       <Link
                         to='/vehicle/$id'
-                        params={{ id: row.getValue('id') as string }}
+                        params={{ id: row.original.id }}
                         className='pointer'
                       >
                         {flexRender(
@@ -168,6 +189,53 @@ export function DataTable<VehicleType, TValue>({
             )}
           </TableBody>
         </Table>
+      </div>
+      <div className='flex items-center justify-end space-x-2 py-4'>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <div className='flex gap-2'>
+              <span>Rows per Page: </span>
+              <Button
+                className='flex justify-between h-6 p-0 px-1 mx-4 gap-2'
+                variant='outline'
+              >
+                <div className='w-6'>
+                  {table.getState().pagination.pageSize}
+                </div>
+                <ChevronsUpDown className='w-3 h-3' />
+              </Button>
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align='end'>
+            {rowsPerPage.map((el) => {
+              return (
+                <DropdownMenuItem
+                  key={el}
+                  onClick={() => table.setPageSize(el)}
+                >
+                  {el}
+                </DropdownMenuItem>
+              );
+            })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <Button
+          variant='outline'
+          size='sm'
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
+        >
+          Previous
+        </Button>
+
+        <Button
+          variant='outline'
+          size='sm'
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
+        >
+          Next
+        </Button>
       </div>
     </div>
   );
