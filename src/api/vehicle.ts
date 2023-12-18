@@ -1,5 +1,7 @@
 import { queryOptions } from '@tanstack/react-query';
 import axios from 'axios';
+import { collection, doc, getDocs, setDoc, updateDoc, deleteDoc } from 'firebase/firestore/lite';
+import { db } from './firebase';
 
 export type VehicleType = {
   id: string;
@@ -15,7 +17,7 @@ export type VehicleResponseType = {
   vehicles: VehicleType[];
 };
 
-export class VehicleNotFoundError extends Error {}
+export class VehicleNotFoundError extends Error { }
 
 export const fetchVehicle = async (id: string) => {
   const vehicle = await axios
@@ -38,18 +40,37 @@ export const fetchVehicle = async (id: string) => {
 };
 
 export const fetchVehicles = async () => {
-  return axios
-    .get<VehicleResponseType>('vehicles.json')
-    .then((r) => r.data.vehicles);
+  const vehicles = collection(db, 'vehicles');
+  const vehicleSnapshot = await getDocs(vehicles);
+  const vehicleList = vehicleSnapshot.docs.map(doc => doc.data());
+  return vehicleList;
+};
+
+export const createVehicle = async (vehicle: VehicleType) => {
+  return await setDoc(doc(db, "vehicles", vehicle.id), vehicle);
+};
+export const updateVehicle = async (vehicle: VehicleType) => {
+  const ref = doc(db, "vehicles", vehicle.id);
+  return await updateDoc(ref, vehicle);
+};
+export const getVehicles = async () => {
+  return await getDocs(collection(db, "vehicles"))
+}
+export const getVehicleById = async (id: string) => {
+  return await getDocs(collection(db, "vehicles", id))
+}
+export const deleteVehicle = async (id: string) => {
+  const ref = doc(db, "vehicles", id);
+  return await deleteDoc(ref);
 };
 
 export const vehiclesQueryOptions = queryOptions({
   queryKey: ['vehicles'],
-  queryFn: () => fetchVehicles(),
+  queryFn: () => getVehicles(),
 });
 
 export const vehicleQueryOptions = (id: string) =>
   queryOptions({
     queryKey: ['vehicles', { id }],
-    queryFn: () => fetchVehicle(id),
+    queryFn: () => getVehicleById(id),
   });
