@@ -31,7 +31,9 @@ import { Link } from '@tanstack/react-router';
 import { Button } from '../primitives/ui/button';
 import { Input } from '@/components/primitives/ui/input';
 import { VehicleType } from '@/api/vehicle';
-import { ChevronsUpDown } from 'lucide-react';
+import { ChevronsUpDown, EyeOff } from 'lucide-react';
+import { VehicleForm } from './vehicle-form';
+import { Dialog, DialogTrigger } from '@radix-ui/react-dialog';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -105,11 +107,23 @@ export function DataTable<TData extends VehicleType, TValue>({
             />
           </div>
         </div>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant='outline' className='mx-4'>
+              Add New Vehicle
+            </Button>
+          </DialogTrigger>
+          <VehicleForm />
+        </Dialog>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant='outline' className='ml-auto'>
+            <Button
+              variant='outline'
+              className='flex justify-between capitalize p-0 px-1 mx-4 gap-2 ml-auto'
+            >
               Columns
+              <EyeOff className='w-4 h-4' />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align='end'>
@@ -133,7 +147,6 @@ export function DataTable<TData extends VehicleType, TValue>({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-
       <div className='rounded-md border'>
         <Table>
           <TableHeader>
@@ -163,16 +176,23 @@ export function DataTable<TData extends VehicleType, TValue>({
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      <Link
-                        to='/vehicle/$id'
-                        params={{ id: row.original.id }}
-                        className='pointer'
-                      >
-                        {flexRender(
+                      {cell.column.id !== 'actions' ? (
+                        <Link
+                          to='/vehicle/$id'
+                          params={{ id: row.original.id }}
+                          className='pointer'
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </Link>
+                      ) : (
+                        flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()
-                        )}
-                      </Link>
+                        )
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>

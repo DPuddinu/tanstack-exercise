@@ -1,7 +1,14 @@
 import { queryOptions } from '@tanstack/react-query';
-import axios from 'axios';
 import { db } from './firebase';
-import { collection, deleteDoc, doc, getDoc, getDocs, setDoc, updateDoc } from 'firebase/firestore/lite';
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
+} from 'firebase/firestore/lite';
 
 export type VehicleType = {
   id: string;
@@ -17,7 +24,7 @@ export type VehicleResponseType = {
   vehicles: VehicleType[];
 };
 
-export class VehicleNotFoundError extends Error { }
+export class VehicleNotFoundError extends Error {}
 
 export const createVehicle = async (vehicle: VehicleType) => {
   return await setDoc(doc(db, 'vehicles', vehicle.id), vehicle);
@@ -28,7 +35,9 @@ export const updateVehicle = async (vehicle: VehicleType) => {
   return await updateDoc(ref, vehicle);
 };
 export const getVehicles = async () => {
-  return (await getDocs(collection(db, 'vehicles'))).docs.map((doc) => doc.data());
+  return (await getDocs(collection(db, 'vehicles'))).docs.map((doc) =>
+    doc.data()
+  );
 };
 export const getVehicleById = async (id: string) => {
   const ref = doc(db, 'vehicles', id);
