@@ -4,6 +4,7 @@ import { Button } from '../primitives/ui/button';
 import { Pencil, Trash } from 'lucide-react';
 import { Dialog, DialogTrigger } from '@radix-ui/react-dialog';
 import { VehicleForm } from './vehicle-form';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const columns: ColumnDef<VehicleType>[] = [
   {
@@ -38,9 +39,12 @@ export const columns: ColumnDef<VehicleType>[] = [
             onClick={() => {
               console.log('Deleted vehicle with ID: ', cell.row.original.id);
               deleteVehicle(cell.row.original.id);
+              toast.success('Vehicle Deleted Succesfully');
+              window.location.reload();
             }}
           >
             <Trash color='red' />
+            <Toaster position='bottom-right' />
           </Button>
         </div>
       );

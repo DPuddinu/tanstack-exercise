@@ -11,6 +11,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { faker } from '@faker-js/faker';
 import { VehicleType, createVehicle, updateVehicle } from '@/api/vehicle';
+import toast, { Toaster } from 'react-hot-toast';
 const VehicleSchema = z.object({
   id: z.string().optional(),
   name: z
@@ -63,11 +64,14 @@ export const VehicleForm = ({ isUpdating, vehicle }: VehicleFormProps) => {
     console.log('Dati del form: ', data);
     console.log('Errori dello schema: ', errors);
     createVehicle(newVehicle);
+    toast.success('Vehicle Created Succesfully');
+    <Toaster position='bottom-right' />;
     reset();
+    window.location.reload();
   };
   const onUpdateSubmit: SubmitHandler<VehicleSchemaType> = (data) => {
     const updatedVehicle: VehicleType = {
-      id: data.id!,
+      id: vehicle?.id!,
       name: data.name,
       color: data.color,
       manufacturer: data.manufacturer,
@@ -78,13 +82,98 @@ export const VehicleForm = ({ isUpdating, vehicle }: VehicleFormProps) => {
     console.log('Dati del form: ', data);
     console.log('Errori dello schema: ', errors);
     updateVehicle(updatedVehicle);
+    toast.success('Vehicle Edited Succesfully');
+    <Toaster position='bottom-right' />;
+    window.location.reload();
   };
   return isUpdating ? (
     <DialogContent>
       <DialogHeader>
         <DialogTitle>Update Vehicle</DialogTitle>
       </DialogHeader>
-      WIP
+      <form onSubmit={handleSubmit(onUpdateSubmit, () => console.log(errors))}>
+        <Input
+          id='name'
+          placeholder={vehicle?.name}
+          defaultValue={vehicle?.name}
+          {...register('name')}
+          className='col-span-4 my-4'
+        />
+        {errors.name && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.name.message}
+          </span>
+        )}
+
+        <Input
+          id='type'
+          placeholder={vehicle?.type}
+          defaultValue={vehicle?.type}
+          {...register('type')}
+          className='col-span-4 my-4'
+        />
+        {errors.type && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.type.message}
+          </span>
+        )}
+
+        <Input
+          id='fuel'
+          placeholder={vehicle?.fuel}
+          defaultValue={vehicle?.fuel}
+          {...register('fuel')}
+          className='col-span-4 my-4'
+        />
+        {errors.fuel && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.fuel.message}
+          </span>
+        )}
+
+        <Input
+          id='color'
+          placeholder={vehicle?.color}
+          defaultValue={vehicle?.color}
+          {...register('color')}
+          className='col-span-4 my-4'
+        />
+        {errors.color && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.color.message}
+          </span>
+        )}
+
+        <Input
+          id='vrm'
+          placeholder={vehicle?.vrm}
+          defaultValue={vehicle?.vrm}
+          {...register('vrm')}
+          className='col-span-4 my-4'
+        />
+        {errors.vrm && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.vrm.message}
+          </span>
+        )}
+
+        <Input
+          id='manufacturer'
+          placeholder={vehicle?.manufacturer}
+          defaultValue={vehicle?.manufacturer}
+          {...register('manufacturer')}
+          className='col-span-4 my-4'
+        />
+        {errors.manufacturer && (
+          <span style={{ color: 'red', fontSize: '12px' }}>
+            {errors.manufacturer.message}
+          </span>
+        )}
+
+        <DialogFooter>
+          <Button type='submit'>Submit</Button>
+        </DialogFooter>
+      </form>
     </DialogContent>
   ) : (
     <DialogContent className='sm:max-w-[425px]'>

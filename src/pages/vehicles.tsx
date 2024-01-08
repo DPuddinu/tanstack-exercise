@@ -11,16 +11,6 @@ const Vehicles = () => {
 
   return (
     <div className='flex flex-col gap-2'>
-      {/* {vehicles.map((v) => (
-        <Link
-          key={v.id}
-          to='/vehicle/$id'
-          params={{ id: v.id }}
-          className='pointer'
-        >
-          {v.name}
-        </Link>
-      ))} */}
       <DataTable columns={columns} data={vehicles}></DataTable>
     </div>
   );
