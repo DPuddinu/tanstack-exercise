@@ -1,9 +1,9 @@
+import { VehicleType } from '@/types/vehicle';
 import { ColumnDef } from '@tanstack/react-table';
-import { VehicleType, deleteVehicle } from '@/api/vehicle';
+import { Trash } from 'lucide-react';
+import { EditVehicleModal } from '../modals/edit-vehicle';
 import { Button } from '../primitives/ui/button';
-import { Pencil, Trash } from 'lucide-react';
-import { Dialog, DialogTrigger } from '@radix-ui/react-dialog';
-import { VehicleForm } from './vehicle-form';
+import { TableOptions } from './table-options';
 
 export const columns: ColumnDef<VehicleType>[] = [
   {
@@ -23,24 +23,12 @@ export const columns: ColumnDef<VehicleType>[] = [
     enableHiding: false,
     cell: (cell) => {
       return (
-        <div className='flex items-center justify-end'>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant='ghost' className='p-0 mx-2 w-5 h-5'>
-                <Pencil />
-              </Button>
-            </DialogTrigger>
-            <VehicleForm isUpdating={true} vehicle={cell.row.original} />
-          </Dialog>
+        <div className='flex gap-2 items-center justify-end'>
+          <EditVehicleModal vehicle={cell.row.original} />
           <Button
-            variant='ghost'
-            className='p-0 mx-2 w-5 h-5'
-            onClick={() => {
-              console.log('Deleted vehicle with ID: ', cell.row.original.id);
-              deleteVehicle(cell.row.original.id);
-            }}
+            variant='ghost' size='sm'
           >
-            <Trash color='red' />
+            <Trash color='red' className="w-5 h-5" />
           </Button>
         </div>
       );

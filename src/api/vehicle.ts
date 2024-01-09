@@ -1,5 +1,5 @@
+import { faker } from '@faker-js/faker';
 import { queryOptions } from '@tanstack/react-query';
-import { db } from './firebase';
 import {
   collection,
   deleteDoc,
@@ -9,25 +9,20 @@ import {
   setDoc,
   updateDoc,
 } from 'firebase/firestore/lite';
+import { db } from './firebase';
+import { VehicleSchema, VehicleType } from '@/types/vehicle';
 
-export type VehicleType = {
-  id: string;
-  name: string;
-  type: string;
-  fuel: string;
-  color: string;
-  vrm: string;
-  manufacturer: string;
-};
 
 export type VehicleResponseType = {
   vehicles: VehicleType[];
 };
 
 export class VehicleNotFoundError extends Error {}
+export type CreateVehicleType = Omit<VehicleType, "id">;
 
-export const createVehicle = async (vehicle: VehicleType) => {
-  return await setDoc(doc(db, 'vehicles', vehicle.id), vehicle);
+export const createVehicle = async (vehicle: CreateVehicleType) => {
+  const newVehicle: VehicleType = { id: faker.string.uuid(), ...vehicle}
+  return await setDoc(doc(db, 'vehicles', newVehicle.id), newVehicle);
 };
 
 export const updateVehicle = async (vehicle: VehicleType) => {
@@ -35,9 +30,8 @@ export const updateVehicle = async (vehicle: VehicleType) => {
   return await updateDoc(ref, vehicle);
 };
 export const getVehicles = async () => {
-  return (await getDocs(collection(db, 'vehicles'))).docs.map((doc) =>
-    doc.data()
-  );
+  const data = (await getDocs(collection(db, 'vehicles'))).docs.map((doc) => doc.data())
+  return VehicleSchema.array().parse(data);
 };
 export const getVehicleById = async (id: string) => {
   const ref = doc(db, 'vehicles', id);

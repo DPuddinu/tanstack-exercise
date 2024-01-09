@@ -1,16 +1,21 @@
-import * as React from 'react';
-
 import {
   ColumnDef,
   ColumnFiltersState,
   VisibilityState,
   flexRender,
   getCoreRowModel,
-  getPaginationRowModel,
   getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/primitives/ui/dropdown-menu';
 import {
   Table,
   TableBody,
@@ -19,21 +24,14 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/primitives/ui/table';
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/primitives/ui/dropdown-menu';
 
-import { Link } from '@tanstack/react-router';
-import { Button } from '../primitives/ui/button';
 import { Input } from '@/components/primitives/ui/input';
-import { VehicleType } from '@/api/vehicle';
+import { VehicleType } from '@/types/vehicle';
+import { Link } from '@tanstack/react-router';
 import { ChevronsUpDown, EyeOff } from 'lucide-react';
-import { VehicleForm } from './vehicle-form';
-import { Dialog, DialogTrigger } from '@radix-ui/react-dialog';
+import { useState } from 'react';
+import { EditVehicleModal } from '../modals/edit-vehicle';
+import { Button } from '../primitives/ui/button';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -46,13 +44,9 @@ export function DataTable<TData extends VehicleType, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  );
-  const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
-
-  const [filterValue, setFilterValue] = React.useState('name');
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+  const [filterValue, setFilterValue] = useState('name');
 
   const table = useReactTable({
     data,
@@ -97,24 +91,18 @@ export function DataTable<TData extends VehicleType, TValue>({
               })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <div className='flex items-center py-4'>
+          <div className='flex gap-2 items-center py-4'>
             <Input
+              id='search'
               placeholder='Search'
               onChange={(event) =>
                 table.getColumn(filterValue)?.setFilterValue(event.target.value)
               }
               className='max-w-sm'
             />
+            <EditVehicleModal />
           </div>
         </div>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant='outline' className='mx-4'>
-              Add New Vehicle
-            </Button>
-          </DialogTrigger>
-          <VehicleForm />
-        </Dialog>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -158,9 +146,9 @@ export function DataTable<TData extends VehicleType, TValue>({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   );
                 })}
