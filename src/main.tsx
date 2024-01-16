@@ -16,6 +16,7 @@ import AboutRoute from './routes/about-route.tsx';
 import IndexRoute from './routes/home-route.tsx';
 import { PostByIdRoute, PostRoute } from './routes/posts-route.tsx';
 import { VehicleByIdRoute, VehiclesRoute } from './routes/vehicles-route.tsx';
+import { Toaster } from './components/primitives/ui/sonner.tsx';
 
 export const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ export const rootRoute = rootRouteWithContext<{ queryClient: QueryClient }>()({
       <hr />
       <div className='p-2 grow'>
         <Outlet />
+        <Toaster />
       </div>
       <ReactQueryDevtools buttonPosition='top-right' />
     </div>

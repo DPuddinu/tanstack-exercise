@@ -10,18 +10,17 @@ import {
   updateDoc,
 } from 'firebase/firestore/lite';
 import { db } from './firebase';
-import { VehicleSchema, VehicleType } from '@/types/vehicle';
-
+import { CreateVehicleSchema, VehicleType } from '@/types/vehicle';
 
 export type VehicleResponseType = {
   vehicles: VehicleType[];
 };
 
 export class VehicleNotFoundError extends Error {}
-export type CreateVehicleType = Omit<VehicleType, "id">;
+export type CreateVehicleType = Omit<VehicleType, 'id'>;
 
 export const createVehicle = async (vehicle: CreateVehicleType) => {
-  const newVehicle: VehicleType = { id: faker.string.uuid(), ...vehicle}
+  const newVehicle: VehicleType = { id: faker.string.uuid(), ...vehicle };
   return await setDoc(doc(db, 'vehicles', newVehicle.id), newVehicle);
 };
 
@@ -30,8 +29,10 @@ export const updateVehicle = async (vehicle: VehicleType) => {
   return await updateDoc(ref, vehicle);
 };
 export const getVehicles = async () => {
-  const data = (await getDocs(collection(db, 'vehicles'))).docs.map((doc) => doc.data())
-  return VehicleSchema.array().parse(data);
+  const data = (await getDocs(collection(db, 'vehicles'))).docs.map((doc) =>
+    doc.data()
+  );
+  return CreateVehicleSchema.array().parse(data);
 };
 export const getVehicleById = async (id: string) => {
   const ref = doc(db, 'vehicles', id);

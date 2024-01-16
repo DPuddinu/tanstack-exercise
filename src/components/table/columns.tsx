@@ -1,9 +1,7 @@
 import { VehicleType } from '@/types/vehicle';
 import { ColumnDef } from '@tanstack/react-table';
-import { Trash } from 'lucide-react';
 import { EditVehicleModal } from '../modals/edit-vehicle';
-import { Button } from '../primitives/ui/button';
-import { TableOptions } from './table-options';
+import { DeleteVehicle } from '../modals/delete-vehicle';
 
 export const columns: ColumnDef<VehicleType>[] = [
   {
@@ -25,11 +23,7 @@ export const columns: ColumnDef<VehicleType>[] = [
       return (
         <div className='flex gap-2 items-center justify-end'>
           <EditVehicleModal vehicle={cell.row.original} />
-          <Button
-            variant='ghost' size='sm'
-          >
-            <Trash color='red' className="w-5 h-5" />
-          </Button>
+          <DeleteVehicle id={cell.row.original.id} />
         </div>
       );
     },
